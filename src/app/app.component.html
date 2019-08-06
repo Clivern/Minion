@@ -2,7 +2,7 @@
 
 <nav class="navbar is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
+    <a class="navbar-item" routerLink="">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
     </a>
 
@@ -15,12 +15,8 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
+      <a routerLink="" class="navbar-item">
         Home
-      </a>
-
-      <a class="navbar-item">
-        Documentation
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
@@ -30,17 +26,10 @@
 
         <div class="navbar-dropdown">
           <a class="navbar-item">
-            About
+            Dropdown Item 1
           </a>
           <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
+            Dropdown Item 2
           </a>
         </div>
       </div>
@@ -49,10 +38,10 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-light">
-            Sign up
+          <a routerLink="register" class="button is-light">
+            Register
           </a>
-          <a class="button is-light">
+          <a routerLink="login" class="button is-light">
             Log in
           </a>
         </div>
@@ -61,14 +50,7 @@
   </div>
 </nav>
 
-  <section class="section">
-    <div class="container">
-      <h1 class="title">{{ title }}</h1>
-      <h2 class="subtitle">
-        A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-      </h2>
-    </div>
-  </section>
+<router-outlet></router-outlet>
 
 <footer class="footer">
   <div class="content has-text-centered">
@@ -79,4 +61,4 @@
   </div>
 </footer>
 
-<router-outlet></router-outlet>
+

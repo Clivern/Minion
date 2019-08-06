@@ -7,4 +7,3 @@ before_script:
   - ng version
 script:
   - ng lint
-  - ng test

@@ -4,5 +4,7 @@ node_js:
 before_script:
   - npm install -g @angular/cli
   - npm install
+  - ng version
 script:
   - ng lint
+  - ng test

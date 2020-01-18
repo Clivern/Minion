@@ -1,8 +1,11 @@
 language: node_js
+
 node_js:
   - "12.7.0"
+
 before_script:
   - make config
   - make version
+
 script:
-  - make test
+  - make ci

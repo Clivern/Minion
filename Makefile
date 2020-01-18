@@ -24,3 +24,11 @@ version:
 ## test: Run lint and testing
 test:
 	$(NG) lint
+	$(NG) build
+
+
+ci: test
+	@echo "\n==> All quality checks passed"
+
+
+.PHONY: help

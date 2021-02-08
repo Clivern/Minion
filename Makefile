@@ -54,6 +54,13 @@ run:
 	$(NPM) start
 
 
+## build: Build the application
+.PHONY: build
+build:
+	@echo ">> ============= Build the Application ============= <<"
+	$(NPM) run build
+
+
 ## ci: Run sanity checks
 .PHONY: ci
 ci: test lint

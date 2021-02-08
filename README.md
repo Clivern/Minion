@@ -26,7 +26,7 @@ $ make run
 Run with docker:
 
 ```zsh
-$ make docker
+$ make deploy
 ```
 
 ## Versioning

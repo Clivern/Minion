@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Minion Logo" src="/src/assets/images/logo.png" height="200" />
+    <img alt="Minion Logo" src="/src/assets/images/logo.png" height="160" />
     <h3 align="center">Minion</h3>
     <p align="center">A Single Page Application Boilerplate.</p>
     <p align="center">

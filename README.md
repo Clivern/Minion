@@ -1,9 +1,9 @@
 <p align="center">
-    <img alt="Minion Logo" src="https://raw.githubusercontent.com/Clivern/Minion/master/src/assets/images/logo.png" height="100" />
+    <img alt="Minion Logo" src="/src/assets/images/logo.png" height="100" />
     <h3 align="center">Minion</h3>
     <p align="center">A Single Page Application Boilerplate.</p>
     <p align="center">
-        <a href="https://github.com/Clivern/Minion/releases"><img src="https://img.shields.io/badge/Version-1.0.0-red.svg"></a>
+        <a href="https://github.com/Clivern/Minion/releases"><img src="https://img.shields.io/badge/Version-2.0.0-red.svg"></a>
         <a href="https://github.com/Clivern/Minion/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-orange.svg"></a>
     </p>
 </p>
@@ -11,6 +11,17 @@
 
 ## Documentation
 
+Install dependencies:
+
+```zsh
+$ make config
+```
+
+Run the project:
+
+```zsh
+$ make run
+```
 
 ## Versioning
 

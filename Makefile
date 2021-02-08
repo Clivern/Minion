@@ -24,9 +24,15 @@ version:
 ## test: Run lint and testing
 test:
 	$(NG) lint
-	$(NG) build
+	$(NPM) run build
 
 
+## run: Run the application
+run:
+	$(NPM) start
+
+
+## ci: Run sanity checks
 ci: test
 	@echo "\n==> All quality checks passed"
 

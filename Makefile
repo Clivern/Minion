@@ -16,7 +16,6 @@ help: Makefile
 config:
 	@echo ">> ============= Config the Application ============= <<"
 	$(NPM) install -g @angular/cli
-	$(NPM) install -g npx
 	$(NPM) install
 
 

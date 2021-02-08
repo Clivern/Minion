@@ -1,6 +1,7 @@
 NPM ?= npm
 NG ?= ng
 NPX          ?= npx
+DOCKER  ?= docker
 
 
 help: Makefile
@@ -59,6 +60,14 @@ run:
 build:
 	@echo ">> ============= Build the Application ============= <<"
 	$(NPM) run build
+
+
+## docker: Build and run docker container
+.PHONY: docker
+docker:
+	@echo ">> ============= Run the Application on Docker ============= <<"
+	$(DOCKER) build -t clivern/minion:latest  .
+	$(DOCKER) run -d -p 8080:80 clivern/minion:latest
 
 
 ## ci: Run sanity checks

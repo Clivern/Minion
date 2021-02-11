@@ -1,5 +1,7 @@
 FROM node:15.14.0 as build
 
+LABEL stage=build
+
 WORKDIR /usr/local/app
 
 COPY ./ /usr/local/app/

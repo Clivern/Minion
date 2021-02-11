@@ -68,6 +68,7 @@ deploy:
 	@echo ">> ============= Run the Application on Docker ============= <<"
 	$(DOCKER) build -t clivern/minion:latest  .
 	$(DOCKER) run -d -p 8080:80 clivern/minion:latest
+	$(DOCKER) image prune --filter label=stage=build -f
 
 
 ## ci: Run sanity checks

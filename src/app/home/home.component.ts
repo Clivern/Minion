@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 			},
 			() => {
 				console.log('Done');
-				this.message = 'How Works!';
+				this.message = 'Home Works!';
 			}
 		);
 	}

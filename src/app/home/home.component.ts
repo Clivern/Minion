@@ -10,6 +10,7 @@ import { TodoService } from '../service/todo.service';
 })
 export class HomeComponent implements OnInit {
 	message = '';
+	modal = false;
 
 	constructor(private todoService: TodoService) {}
 
@@ -29,5 +30,15 @@ export class HomeComponent implements OnInit {
 				this.message = 'Home Works!';
 			}
 		);
+	}
+
+	toggle() {
+		this.modal = true;
+		console.log('Open Modal!');
+	}
+
+	close() {
+		this.modal = false;
+		console.log('Close Modal!');
 	}
 }

@@ -3,5 +3,20 @@
 <section class="section">
 	<div class="container">
 		<h1 class="title">{{ message }}</h1>
+		<button (click)="toggle()" class="button is-warning">Click</button>
 	</div>
 </section>
+
+<div [className]="modal ? 'modal is-active' : 'modal'">
+	<div class="modal-background"></div>
+	<div class="modal-content">
+		<p class="image is-4by3">
+			<img src="https://source.unsplash.com/random/1280x960?alone" alt="" />
+		</p>
+	</div>
+	<button
+		class="modal-close is-large"
+		aria-label="close"
+		(click)="close()"
+	></button>
+</div>

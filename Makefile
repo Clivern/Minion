@@ -38,14 +38,14 @@ test:
 .PHONY: lint
 lint:
 	@echo ">> ============= Validate js format ============= <<"
-	cd src;$(NPX) prettier  --check .
+	$(NPX) prettier  --check .
 
 
 ## format: Format code
 .PHONY: format
 format:
 	@echo ">> ============= Format js Code ============= <<"
-	cd src;$(NPX) prettier  --write .
+	$(NPX) prettier  --write .
 
 
 ## run: Run the application

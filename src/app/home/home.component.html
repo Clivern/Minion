@@ -16,7 +16,9 @@
 			<p class="modal-card-title">Modal Title</p>
 			<button class="delete" aria-label="close" (click)="close()"></button>
 		</header>
-		<section class="modal-card-body">Body goes here</section>
+		<section class="modal-card-body">
+			<progress class="progress is-small is-primary" max="100">15%</progress>
+		</section>
 		<footer class="modal-card-foot">
 			<button class="button is-success" (click)="save()">Save</button>
 			<button class="button" (click)="cancel()">Cancel</button>

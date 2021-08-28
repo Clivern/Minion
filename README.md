@@ -3,7 +3,7 @@
     <h3 align="center">Minion</h3>
     <p align="center">A Single Page Application Boilerplate.</p>
     <p align="center">
-        <a href="https://github.com/Clivern/Minion/releases"><img src="https://img.shields.io/badge/Version-2.3.0-red.svg"></a>
+        <a href="https://github.com/Clivern/Minion/releases"><img src="https://img.shields.io/badge/Version-2.4.0-red.svg"></a>
         <a href="https://github.com/Clivern/Minion/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-orange.svg"></a>
     </p>
 </p>

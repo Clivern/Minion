@@ -1,6 +1,7 @@
 /** @format */
 
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ApiService } from '../service/api.service';
 
 @Component({
@@ -11,12 +12,14 @@ import { ApiService } from '../service/api.service';
 export class HomeComponent implements OnInit {
 	message = '';
 	modal = false;
+	title = 'Minion | Single Page Application Boilerplate';
 
-	constructor(private apiService: ApiService) {}
+	constructor(private apiService: ApiService, private titleService: Title) {}
 
 	ngOnInit(): void {
 		console.log('Init');
 		this.message = 'Loading';
+		this.titleService.setTitle(this.title);
 
 		this.apiService.getStatus().subscribe(
 			(result) => {
@@ -27,7 +30,7 @@ export class HomeComponent implements OnInit {
 			},
 			() => {
 				console.log('Done');
-				this.message = 'Home Works!';
+				this.message = 'Home Page!';
 			}
 		);
 	}

@@ -1,7 +1,9 @@
 <!-- @format -->
 
 <section class="section">
-	<div class="container">
+	<div class="container" style="text-align: center">
+		<img src="https://source.unsplash.com/random/1280x500?black" alt="" />
+		<br /><br />
 		<h1 class="title">{{ message }}</h1>
 		<button (click)="toggle()" class="button is-warning">Modal</button>
 	</div>
@@ -9,14 +11,15 @@
 
 <div [className]="modal ? 'modal is-active' : 'modal'">
 	<div class="modal-background"></div>
-	<div class="modal-content">
-		<p class="image is-4by3">
-			<img src="https://source.unsplash.com/random/1280x960?alone" alt="" />
-		</p>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Modal Title</p>
+			<button class="delete" aria-label="close" (click)="close()"></button>
+		</header>
+		<section class="modal-card-body">Body goes here</section>
+		<footer class="modal-card-foot">
+			<button class="button is-success" (click)="save()">Save</button>
+			<button class="button" (click)="cancel()">Cancel</button>
+		</footer>
 	</div>
-	<button
-		class="modal-close is-large"
-		aria-label="close"
-		(click)="close()"
-	></button>
 </div>

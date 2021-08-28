@@ -2,6 +2,7 @@ NPM ?= npm
 NG ?= ng
 NPX ?= npx
 DOCKER ?= docker
+NODE ?= node
 
 
 help: Makefile
@@ -48,11 +49,17 @@ format:
 	$(NPX) prettier  --write .
 
 
-## run: Run the application
-.PHONY: run
-run:
+## frontend: Run the application frontend
+.PHONY: frontend
+frontend:
 	@echo ">> ============= Run the Application ============= <<"
-	$(NPM) start
+	$(NG) serve --proxy-config proxy.config.json
+
+
+## backend: Run the application backend
+.PHONY: backend
+backend:
+	$(NODE) server.js
 
 
 ## build: Build the application

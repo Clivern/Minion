@@ -1,7 +1,7 @@
 /** @format */
 
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../service/todo.service';
+import { ApiService } from '../service/api.service';
 
 @Component({
 	selector: 'app-home',
@@ -12,15 +12,15 @@ export class HomeComponent implements OnInit {
 	message = '';
 	modal = false;
 
-	constructor(private todoService: TodoService) {}
+	constructor(private apiService: ApiService) {}
 
 	ngOnInit(): void {
 		console.log('Init');
 		this.message = 'Loading';
 
-		this.todoService.getTodos().subscribe(
-			(todos) => {
-				console.log(todos);
+		this.apiService.getStatus().subscribe(
+			(result) => {
+				console.log(result);
 			},
 			(res) => {
 				console.log(res);
@@ -40,5 +40,15 @@ export class HomeComponent implements OnInit {
 	close() {
 		this.modal = false;
 		console.log('Close Modal!');
+	}
+
+	cancel() {
+		this.modal = false;
+		console.log('Cancel Modal!');
+	}
+
+	save() {
+		this.modal = false;
+		console.log('Save Modal!');
 	}
 }

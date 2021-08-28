@@ -6,13 +6,25 @@ WORKDIR /usr/local/app
 
 COPY ./ /usr/local/app/
 
-RUN npm install
+RUN npm install --loglevel=error
 
-RUN npm run build
+RUN npm run build --loglevel=error
 
-FROM nginx:1.21.1
+FROM node:15.14.0
 
-COPY --from=build /usr/local/app/dist/Minion /usr/share/nginx/html
-COPY --from=build /usr/local/app/nginx.config /etc/nginx/conf.d/default.conf
+RUN mkdir -p /usr/local/app/dist
+
+COPY --from=build /usr/local/app/package.json /usr/local/app/package.json
+COPY --from=build /usr/local/app/package-lock.json /usr/local/app/package-lock.json
+COPY --from=build /usr/local/app/dist /usr/local/app/dist
+COPY --from=build /usr/local/app/server.js /usr/local/app/server.js
+
+WORKDIR /usr/local/app/
+
+RUN npm install --loglevel=error
+
+ENV PORT=80
 
 EXPOSE 80
+
+CMD ["node", "server.js"]

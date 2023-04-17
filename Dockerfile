@@ -1,4 +1,4 @@
-FROM node:15.14.0 as build
+FROM node:19.9.0 as build
 
 LABEL stage=build
 
@@ -10,7 +10,7 @@ RUN npm install --loglevel=error
 
 RUN npm run build --loglevel=error
 
-FROM node:15.14.0
+FROM node:19.9.0
 
 RUN mkdir -p /usr/local/app/dist
 

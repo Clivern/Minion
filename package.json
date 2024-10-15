@@ -23,7 +23,7 @@
     "bulma": "0.9.3",
     "express": "4.17.1",
     "rxjs": "7.4.0",
-    "tslib": "2.3.1",
+    "tslib": "2.8.0",
     "zone.js": "0.11.4"
   },
   "devDependencies": {
